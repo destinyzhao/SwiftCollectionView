@@ -21,7 +21,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func loadData() -> Void {
-        dataArray = ["九宫格"]
+        dataArray = ["九宫格","Header和Footer"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +52,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            self .performSegueWithIdentifier("JiugonggeVC", sender: nil)
+            self.performSegueWithIdentifier("JiugonggeVC", sender: nil)
+        case 1:
+            self.performSegueWithIdentifier("HeaderAndFooterVC", sender: nil)
         default:
             break
         }

@@ -16,6 +16,7 @@
 		FA1A318D1D46071A00DB0311 /* SwiftCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A318C1D46071A00DB0311 /* SwiftCollectionViewUITests.swift */; };
 		FA1A319C1D460A6B00DB0311 /* MainCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A319B1D460A6B00DB0311 /* MainCollectionCell.swift */; };
 		FA1A319F1D460C8D00DB0311 /* JiugonggeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A319E1D460C8D00DB0311 /* JiugonggeViewController.swift */; };
+		FA1A31A21D470E1E00DB0311 /* HeaderAndFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A31A11D470E1E00DB0311 /* HeaderAndFooterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FA1A318E1D46071A00DB0311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1A319B1D460A6B00DB0311 /* MainCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionCell.swift; sourceTree = "<group>"; };
 		FA1A319E1D460C8D00DB0311 /* JiugonggeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiugonggeViewController.swift; sourceTree = "<group>"; };
+		FA1A31A11D470E1E00DB0311 /* HeaderAndFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderAndFooterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FA1A319E1D460C8D00DB0311 /* JiugonggeViewController.swift */,
+				FA1A31A11D470E1E00DB0311 /* HeaderAndFooterViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1A31A21D470E1E00DB0311 /* HeaderAndFooterViewController.swift in Sources */,
 				FA1A316F1D46071A00DB0311 /* ViewController.swift in Sources */,
 				FA1A319C1D460A6B00DB0311 /* MainCollectionCell.swift in Sources */,
 				FA1A319F1D460C8D00DB0311 /* JiugonggeViewController.swift in Sources */,
