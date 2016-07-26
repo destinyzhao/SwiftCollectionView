@@ -47,14 +47,17 @@ class HeaderAndFooterViewController: UIViewController,UICollectionViewDelegate,U
         layout.sectionInset = UIEdgeInsetsMake(spacing, spacing, spacing, spacing)
     }
     
+    // 分区
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 2
     }
     
+    // row
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
+    // cell
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let idenifier = "HeaderAndFooterCell"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(idenifier, forIndexPath: indexPath)
@@ -63,34 +66,34 @@ class HeaderAndFooterViewController: UIViewController,UICollectionViewDelegate,U
         return cell
     }
     
-    
+    // Header view Size
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
         
         return CGSize(width: UIScreen.mainScreen().bounds.width, height: 50)
     }
     
+    // Footer View Size
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize{
         
         return CGSize(width: UIScreen.mainScreen().bounds.width, height: 50)
     }
     
-    
+    // 设置 header View and Footer View
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionElementKindSectionHeader
         {
-            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "HeaderView", forIndexPath: indexPath)
-            
+            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "HeaderView", forIndexPath: indexPath) as! CollectionHeaderView
             headerView.backgroundColor = UIColor.blueColor();
+            headerView.headerTitleLbl.text = "Header-" + "\(indexPath.section)"
             return headerView
             
         }
         else {
-        let footerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "FooterView", forIndexPath: indexPath)
-        
-        footerView.backgroundColor = UIColor.greenColor();
-        return footerView
-
+            let footerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "FooterView", forIndexPath: indexPath) as! CollectionFooterView
+            footerView.backgroundColor = UIColor.whiteColor()
+            footerView.footerTitleLbl.text = "Footer-" + "\(indexPath.section)"
+            return footerView
         }
 
     }

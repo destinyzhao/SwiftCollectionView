@@ -192,13 +192,51 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="asB-5w-F05">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="asB-5w-F05" customClass="CollectionHeaderView" customModule="SwiftCollectionView" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHt-AI-45V">
+                                            <rect key="frame" x="10" y="14" width="300" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="vfn-06-I0M"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EHt-AI-45V" firstAttribute="leading" secondItem="asB-5w-F05" secondAttribute="leading" constant="10" id="DzE-SV-bSM"/>
+                                        <constraint firstItem="EHt-AI-45V" firstAttribute="centerY" secondItem="asB-5w-F05" secondAttribute="centerY" id="bdi-AI-lzK"/>
+                                        <constraint firstAttribute="trailing" secondItem="EHt-AI-45V" secondAttribute="trailing" constant="10" id="dXM-c7-7K6"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="headerTitleLbl" destination="EHt-AI-45V" id="iK4-Fo-cgM"/>
+                                    </connections>
                                 </collectionReusableView>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FooterView" id="LAU-NQ-Wp4">
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FooterView" id="LAU-NQ-Wp4" customClass="CollectionFooterView" customModule="SwiftCollectionView" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="100" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k46-lb-XIz">
+                                            <rect key="frame" x="10" y="14" width="300" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="YJf-yV-GyA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="k46-lb-XIz" firstAttribute="leading" secondItem="LAU-NQ-Wp4" secondAttribute="leading" constant="10" id="FEx-33-Icx"/>
+                                        <constraint firstItem="k46-lb-XIz" firstAttribute="centerY" secondItem="LAU-NQ-Wp4" secondAttribute="centerY" id="Xj5-eH-Vhk"/>
+                                        <constraint firstAttribute="trailing" secondItem="k46-lb-XIz" secondAttribute="trailing" constant="10" id="y7D-uI-yzR"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="footerTitleLbl" destination="k46-lb-XIz" id="5mJ-uh-aLk"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="NAP-Ay-Mvs" id="gGZ-z2-8yX"/>
